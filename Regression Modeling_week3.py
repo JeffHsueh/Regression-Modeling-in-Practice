@@ -33,7 +33,7 @@ plt.ylabel('Employment Rate')
 # run the 2 scatterplots together to get both linear and second order fit lines
 scat1 = seaborn.regplot(x="urbanrate", y="employrate", scatter=True, order=2, data=sub1)
 plt.xlabel('Urbanization Rate')
-plt.ylabel('Female Employment Rate')
+plt.ylabel('Employment Rate')
 
 # center quantitative IVs for regression analysis
 sub1['urbanrate_c'] = (sub1['urbanrate'] - sub1['urbanrate'].mean())
