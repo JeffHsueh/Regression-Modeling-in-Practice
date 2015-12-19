@@ -63,6 +63,11 @@ print (reg3.summary())
 #Q-Q plot for normality
 fig4=sm.qqplot(reg3.resid, line='r')
 print (fig4)
+
+
+fig2 = plt.show()
+fig2 = sm.graphics.plot_regress_exog(reg3,  "relectricperperson_c", fig=fig2)
+
 # simple plot of residuals
 stdres=pandas.DataFrame(reg3.resid_pearson)
 plt.plot(stdres, 'o', ls='None')
