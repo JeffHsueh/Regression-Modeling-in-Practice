@@ -55,7 +55,7 @@ print (reg1.summary())
 # EVALUATING MODEL FIT
 ####################################################################################
 
-# adding internet use rate
+# adding residential electricity consumption, per person
 reg3 = smf.ols('employrate  ~ urbanrate_c + I(urbanrate_c**2) + relectricperperson_c', 
                data=sub1).fit()
 print (reg3.summary())
